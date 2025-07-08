@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Savate:ital,wght@0,200..900;1,200..900&display=swap');
+
+@import "tailwindcss";
+
+
+@theme {
+    --font-Mont:"Montserrat Alternates","san-serif";
+  --font-Inter:"Inter","san-serif";
+   --color-background: #0f1117;         /* Main dark background */
+  --color-card: #1a1d24;               /* Card / bento box background */
+  --color-text: #f4f4f5;               /* Primary text */
+  --color-text-secondary: #9ca3af;     /* Dimmed secondary text */
+  --color-accent: #22d3ee;             /* Neon cyan-blue (accent) */
+  --color-accent-hover: #0ea5e9;       /* Slightly deeper for hover states */
+  --color-border: #2c2f36;             /* Border lines for cards and sidebar */
+  --color-shadow: rgba(0, 0, 0, 0.4);  /* Box shadows under cards */
+  --color-sidebar: #12141c;            /* Sidebar background */
+  --color-header: #1f2128;             /* Header background */
+  --color-scrollbar: #3b3b3b;          /* Custom scrollbars if needed */
+  --color-success: #10b981;            /* For success/goal achieved highlights */
+  --color-warning: #f59e0b;            /* For alerts/reminders */
+  --color-danger: #ef4444;             /* For error or missed workout notices */
+}
+
+
+body{
+  box-sizing: border-box;
+  margin: 0;
+  background: #121212;
+  font-family: Inter,sans-serif;
+  color:#f4f4f5;
+}
+
+.card{
+  @apply bg-card p-6 font-Mont  rounded-md;
+}
