@@ -1,4 +1,4 @@
-const data={
+export const data={
     calories:{
         goal:2000,
         consumed:1862,
@@ -50,4 +50,34 @@ streak: {
 }
 
 }
-export default data;
+
+const getDayLabel = (i) => {
+  const date = new Date()
+  date.setDate(date.getDate() - (29 - i))
+  return date.toISOString().split("T")[0] // YYYY-MM-DD
+}
+
+const generateWeightData = () =>
+  Array.from({ length: 30 }, (_, i) => ({
+    name: getDayLabel(i),
+    weight: +(68 + Math.sin(i / 3) * 1.5 + Math.random()).toFixed(1), // ~68kg fluctuating
+  }))
+
+const generateSleepData = () =>
+  Array.from({ length: 30 }, (_, i) => ({
+    name: getDayLabel(i),
+    sleep: +(Math.random() * 3 + 5.5).toFixed(1), // 5.5–8.5 hrs
+  }))
+
+const generateWorkoutIntensity = () =>
+  Array.from({ length: 30 }, (_, i) => ({
+    name: getDayLabel(i),
+    intensity: Math.floor(Math.random() * 11), // 0–10 effort score
+  }))
+
+export const statsData = {
+  weightProgress: generateWeightData(),
+  sleepStats: generateSleepData(),
+  workoutIntensity: generateWorkoutIntensity(),
+}
+

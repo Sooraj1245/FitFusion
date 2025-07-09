@@ -1,5 +1,5 @@
 import CardHeader from "../components/CardHeader";
-import data from "../dummydata.js";
+import { data } from "../dummyData";
 export default function Streak(){
     return (
         <div>

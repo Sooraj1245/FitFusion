@@ -1,25 +1,18 @@
 import React from "react";
 import { Dropdown, DropdownTrigger, DropdownMenu, DropdownItem, Button } from "@heroui/react";
 
-export default function DropDown() {
-  const [selectedKeys, setSelectedKeys] = React.useState(new Set(["text"]));
+export default function DropDown(props) {
+  const [selectedKeys, setSelectedKeys] = React.useState(new Set([props.key]));
 
-  const options = [
-    { key: "text", label: "Text", icon: "📝", description: "Plain text input" },
-    { key: "number", label: "Number", icon: "🔢", description: "Numeric values only" },
-    { key: "date", label: "Date Range", icon: "📅", description: "Start and end dates" },
-    { key: "single_date", label: "Single Date", icon: "📆", description: "Pick one date" },
-    { key: "iteration", label: "Iteration", icon: "🔄", description: "Repeating cycles" }
-  ];
 
   const selectedValue = React.useMemo(() => {
     const key = Array.from(selectedKeys)[0];
-    return options.find(option => option.key === key)?.label || "Select option";
+    return props.options.find(option => option.key === key)?.label || "Select option";
   }, [selectedKeys]);
 
   const selectedIcon = React.useMemo(() => {
     const key = Array.from(selectedKeys)[0];
-    return options.find(option => option.key === key)?.icon || "📝";
+    return props.options.find(option => option.key === key)?.icon || "📝";
   }, [selectedKeys]);
 
   return (
@@ -32,8 +25,9 @@ export default function DropDown() {
     >
       <DropdownTrigger>
         <Button 
-          className="capitalize bg-card/80 hover:bg-background text-text text-[15px] font-semibold font-Inter border border-accent/80 shadow-sm transition-all duration-200 hover:shadow-md min-w-[140px] focus:outline-none" 
+          className="capitalize bg-card/80 hover:bg-background text-text text-[15px] font-semibold font-Inter border border-white/10 shadow-sm transition-all duration-200 hover:shadow-md min-w-[140px] focus:outline-none" 
           variant="faded"
+          size={props.size}
           startContent={<span className="text-[16px]">{selectedIcon}</span>}
           endContent={<span className="text-gray-400 text-[12px]">▼</span>}
         >
@@ -50,7 +44,7 @@ export default function DropDown() {
         variant="solid"
         onSelectionChange={setSelectedKeys}
       >
-        {options.map((option) => (
+        {props.options.map((option) => (
           <DropdownItem 
             key={option.key}
             className="rounded-md hover:bg-accent-hover/10 transition-colors duration-200 p-3 outline-none"

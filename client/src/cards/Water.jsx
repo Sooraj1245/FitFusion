@@ -1,6 +1,6 @@
 import CardHeader from "../components/CardHeader";
 import { Progress } from "@heroui/react";
-import data from "../dummydata";
+import {data} from "../dummyData.js";
 import { animate } from "motion";
 import { useEffect,useState } from "react";
 

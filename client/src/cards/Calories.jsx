@@ -1,7 +1,7 @@
 import { animate } from "motion";
 import { useEffect, useRef, useState } from "react";
 import { CircularProgress } from "@heroui/react";
-import data from "../dummydata.js";
+import { data } from "../dummyData.js";
 import CardHeader from "../components/CardHeader.jsx";
 
 export default function Calories() {

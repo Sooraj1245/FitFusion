@@ -1,4 +1,5 @@
 import Calories from "../cards/Calories";
+import Info from "../cards/Info";
 import Sleep from "../cards/Sleep";
 import Stats from "../cards/Stats";
 import Streak from "../cards/Streak";
@@ -7,10 +8,9 @@ import Water from "../cards/Water";
 export default function Dashboard() {
   return (
     <div className="grid 
-        grid-cols-1 
-        sm:grid-cols-2 
+        auto-rows-min
         lg:grid-cols-4 
-        grid-rows-[auto_1fr_auto]
+        lg:grid-rows-[auto_1fr_auto]
         w-full
         h-full 
         p-2 sm:p-4 
@@ -25,22 +25,18 @@ export default function Dashboard() {
 
       {/* Analytics Section */}
       <div className="card analyticsCard
-        col-span-1 sm:col-span-2 lg:col-span-2 
-        row-span-1 sm:row-span-2"
+        hidden lg:block
+        lg:col-span-3 lg:row-span-2"
       >
         <Stats />
       </div>
 
-      <div className="card analyticsControlCard 
-        col-span-1 sm:col-span-2 lg:col-span-2"
-      >
-        Stats Control
-      </div>
 
-      <div className="card foodRecomendationCard 
-        col-span-1 sm:col-span-2 lg:col-span-2"
+      <div className="card analyticsControlCard 
+          sm:col-span-2 lg:col-span-1
+          row-span-1 sm:row-span-2 lg:row-span-2"
       >
-        Food Recom
+        <Info />
       </div>
     </div>
   );
