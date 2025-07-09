@@ -10,14 +10,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@heroui/progress": "^2.2.18",
-    "@heroui/system": "^2.4.18",
-    "@heroui/theme": "^2.4.17",
+    "@heroui/react": "^2.8.0-beta.13",
     "@tailwindcss/vite": "^4.1.11",
     "framer-motion": "^12.23.0",
+    "motion": "^12.23.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "recharts": "^3.0.2",
+    "recharts": "^3.1.0",
     "tailwindcss": "^4.1.11"
   },
   "devDependencies": {
