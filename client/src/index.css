@@ -40,3 +40,20 @@ body{
 .opt{
   @apply bg-card outline-none border-none appearance-none
 }
+
+
+#scroll-container{
+  @apply overflow-hidden relative h-full border-1 border-white/10 rounded-md;
+}
+
+#scroll-content{
+  @apply h-full p-2 pr-4 overflow-hidden;
+}
+
+#scroll-track{
+  @apply absolute  top-[10px] right-[10px] h-[calc(100%-20px)] bg-accent/20 w-[8px] rounded-full cursor-pointer ;
+}
+
+#scroll-thumb{
+  @apply min-h-[20px] bg-linear-60 from-accent to-purple-400 absolute top-0 left-0 w-full rounded-full transition-background duration-200 ease-in cursor-grab drop-shadow-purple-300/40 drop-shadow-sm;
+}

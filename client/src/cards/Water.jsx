@@ -22,7 +22,6 @@ export default function Water() {
 
 
     const waterPercentage=Math.min((totalWater/waterGoal)*100,100)
-    console.log(totalWater)
 
 
     useEffect(()=>{

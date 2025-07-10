@@ -14,7 +14,7 @@ const Stats = () => {
         <div className='flex justify-between items-start'>
             <CardHeader icon="👁️" name="Statistics" />
             <div className='flex flex-col gap-2'>
-              <DropDown options={options} key="calories" size="md" />
+              <DropDown options={options} key="calories" size="sm" />
               {/* <DropDown /> */}
             </div>
         </div>
