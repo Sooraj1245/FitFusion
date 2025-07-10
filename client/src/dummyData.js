@@ -75,6 +75,40 @@ const generateWorkoutIntensity = () =>
     intensity: Math.floor(Math.random() * 11), // 0–10 effort score
   }))
 
+
+
+  export const infoData={
+    workouts:{
+      back:[
+        {
+          name:"Lat Pulldown",
+          reps:"3 sets of 15"
+        },
+        {
+          name:"Lat Pulldown",
+          reps:"3 sets of 15"
+        },
+        {
+          name:"Lat Pulldown",
+          reps:"3 sets of 15"
+        },
+        {
+          name:"Lat Pulldown",
+          reps:"3 sets of 15"
+        },
+        {
+          name:"Lat Pulldown",
+          reps:"3 sets of 15"
+        },
+        {
+          name:"Lat Pulldown",
+          reps:"3 sets of 15"
+        },
+      ]
+    }
+  }
+
+
 export const statsData = {
   weightProgress: generateWeightData(),
   sleepStats: generateSleepData(),

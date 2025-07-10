@@ -8,6 +8,7 @@ import Water from "../cards/Water";
 export default function Dashboard() {
   return (
     <div className="grid 
+        min-h-0
         auto-rows-min
         lg:grid-cols-4 
         lg:grid-rows-[auto_1fr_auto]
@@ -15,7 +16,7 @@ export default function Dashboard() {
         h-full 
         p-2 sm:p-4 
         gap-2 sm:gap-4 
-        overflow-hidden"
+        " 
     >
       {/* Top Cards */}
       <div className="card goalCard"><Streak /></div>
@@ -33,6 +34,7 @@ export default function Dashboard() {
 
 
       <div className="card analyticsControlCard 
+          overflow-y-hidden
           sm:col-span-2 lg:col-span-1
           row-span-1 sm:row-span-2 lg:row-span-2"
       >

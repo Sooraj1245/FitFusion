@@ -2,7 +2,7 @@ import React from "react";
 import { Dropdown, DropdownTrigger, DropdownMenu, DropdownItem, Button } from "@heroui/react";
 
 export default function DropDown(props) {
-  const [selectedKeys, setSelectedKeys] = React.useState(new Set([props.key]));
+  const [selectedKeys, setSelectedKeys] = React.useState(new Set(["calories"]));
 
 
   const selectedValue = React.useMemo(() => {

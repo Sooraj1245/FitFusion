@@ -4,11 +4,11 @@ import SideBar from "../components/SideBar";
 
 export default function HomePage(){
     return (
-        <div className="flex flex-col min-h-screen">
+        <div className="flex flex-col h-screen">
             <Header/>
-            <div className="flex flex-1 overflow-hidden">
+            <div className="flex flex-1 overflow-hidden min-h-0">
                 <SideBar/>
-                <main className="flex-1 overflow-y-auto">
+                <main className="flex-1 overflow-auto min-h-0">
                     <Dashboard />
                 </main>
                 
