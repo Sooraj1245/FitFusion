@@ -34,3 +34,30 @@ export function events(e,content){
 }
 
 
+export function drag(e,content,container){
+    
+        isDragging=true;
+        startY=e.clientY;
+        startScrollTop=content.scrollTop;
+
+        document.addEventListener('mousemove',handleMouseMove);
+        document.addEventListener('mouseup',handleMouseup);
+
+
+    function handleMouseMove(e){
+        if(!isDragging) return;
+        const movedDistance=e.clientY-startY;
+        const containerHeight=container.offsetHeight;
+        const contentHeight=content.scrollHeight;
+
+        const scrollRatio=movedDistance/containerHeight;
+        content.scrollTop=startScrollTop+(scrollRatio*contentHeight);
+        update();
+    }
+
+    function handleMouseup(){
+        isDragging=false
+        document.removeEventListener("mousemove",handleMouseMove);
+        document.removeEventListener("mouseup",handleMouseup);
+    }
+}

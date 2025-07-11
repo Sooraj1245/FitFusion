@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react'
 import CardHeader from '../components/CardHeader'
 import DropDown from '../components/Dropdown'
 import { infoData } from '../dummyData'
-import { update,events } from '../scripts/scrollBarControl'
+import { update,events,drag } from '../scripts/scrollBarControl'
 
 const Info = () => {
     const options = [
@@ -13,14 +13,31 @@ const Info = () => {
 
   const containerRef=useRef(null);
   const contentRef=useRef(null);
+  const scrollThumb=useRef(null);
+
+
   useEffect(()=>{
     if(!containerRef.current) return;
 
     const container=containerRef.current;
+    const content=contentRef.current;
+    const thumb=scrollThumb.current
     update();
-    container.addEventListener("wheel",(e)=>{events(e,contentRef.current)});
+    container.addEventListener("wheel",handleWheel);
+    thumb.addEventListener("mousedown",handleMouseDown)
+
+    function handleWheel(e){
+      events(e,content)
+    }
+
+    function handleMouseDown(e){
+      drag(e,content,container)
+    }
+
+
     return ()=>{
-      container.removeEventListener("wheel",(e)=>events(e,contentRef.current));
+      container.removeEventListener("wheel",handleWheel);
+      thumb.removeEventListener("mousedown",handleMouseDown);
     }
 
 
@@ -43,7 +60,7 @@ const Info = () => {
         ))}
         </div>
         <div id='scroll-track'>
-          <div id='scroll-thumb'></div>
+          <div ref={scrollThumb} id='scroll-thumb'></div>
         </div>
       </div>
     </div>
