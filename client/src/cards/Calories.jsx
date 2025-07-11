@@ -18,7 +18,7 @@ export default function Calories() {
       easing: "ease-out",
       onUpdate(latest) {
         setAnimatedValue(latest);
-      }
+      },
     });
 
     return () => controls.stop();
@@ -36,7 +36,7 @@ export default function Calories() {
             svg: "w-[100px] h-[100px] drop-shadow-md",
             indicator: "stroke-success",
             track: "stroke-white/10",
-            value:"text-[15px] text-success font-semibold"
+            value: "text-[15px] text-success font-semibold",
           }}
           disableAnimation
           aria-label={`Calories Consumed: ${targetValue}`}
