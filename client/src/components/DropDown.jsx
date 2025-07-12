@@ -28,16 +28,16 @@ export default function DropDown(props) {
       backdrop="opaque"
       className="font-Inter"
       classNames={{
-        content: "bg-accent/10 backdrop-blur-md shadow-lg rounded-lg p-1",
+        content: "bg-card/95 backdrop-blur-md shadow-lg rounded-lg p-1 border border-border",
       }}
     >
       <DropdownTrigger>
         <Button
-          className="capitalize bg-card/80 hover:bg-background text-text text-[15px] font-semibold font-Inter border border-white/10 shadow-sm transition-all duration-200 hover:shadow-md min-w-[140px] focus:outline-none"
+          className="capitalize bg-card/80 hover:bg-background text-text text-[15px] font-semibold font-Inter border border-border shadow-sm transition-all duration-200 hover:shadow-md min-w-[140px] focus:outline-none"
           variant="faded"
           size={props.size}
-          startContent={<span className="text-[16px]">{selectedIcon}</span>}
-          endContent={<span className="text-gray-400 text-[12px]">▼</span>}
+          startContent={<span className="text-[16px] text-accent">{selectedIcon}</span>}
+          endContent={<span className="text-text-secondary text-[12px]">▼</span>}
         >
           {selectedValue}
         </Button>
@@ -55,11 +55,11 @@ export default function DropDown(props) {
         {props.options.map((option) => (
           <DropdownItem
             key={option.key}
-            className="rounded-md hover:bg-accent-hover/10 transition-colors duration-200 p-3 outline-none"
-            startContent={<span className="text-[16px]">{option.icon}</span>}
+            className="rounded-md hover:bg-accent-hover/10 transition-colors duration-200 p-3 outline-none text-text"
+            startContent={<span className="text-[16px] text-accent">{option.icon}</span>}
           >
             <div className="flex flex-col">
-              <span className="font-medium text-[14px]">{option.label}</span>
+              <span className="font-medium text-[14px] text-text-secondary">{option.label}</span>
             </div>
           </DropdownItem>
         ))}

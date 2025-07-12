@@ -8,33 +8,47 @@
 @theme {
   --font-Mont: "Montserrat Alternates", "san-serif";
   --font-Inter: "Inter", "san-serif";
-  --color-background: #0f1117; /* Main dark background */
-  --color-card: #1a1d24; /* Card / bento box background */
-  --color-text: #f4f4f5; /* Primary text */
-  --color-text-secondary: #9ca3af; /* Dimmed secondary text */
-  --color-accent: #22d3ee; /* Neon cyan-blue (accent) */
-  --color-accent-hover: #0ea5e9; /* Slightly deeper for hover states */
-  --color-border: #2c2f36; /* Border lines for cards and sidebar */
-  --color-shadow: rgba(0, 0, 0, 0.4); /* Box shadows under cards */
-  --color-sidebar: #12141c; /* Sidebar background */
-  --color-header: #1f2128; /* Header background */
-  --color-scrollbar: #3b3b3b; /* Custom scrollbars if needed */
-  --color-success: #10b981; /* For success/goal achieved highlights */
-  --color-warning: #f59e0b; /* For alerts/reminders */
-  --color-danger: #ef4444; /* For error or missed workout notices */
+  --color-background: #18181b; /* Deep neutral, minimal dark base */
+  --color-card: #232326; /* Slightly lighter neutral for cards */
+  --color-text: #ffffff; /* Crisp white for clarity */
+  --color-text-secondary: #b1b1b1; /* Subtle gray for secondary text */
+  --color-accent: #4f8cff; /* Clean blue accent */
+  --color-accent-hover: #2563eb; /* Deeper blue for hover */
+  --color-border: #2c2c2f; /* Neutral border for separation */
+  --color-shadow: rgba(0, 0, 0, 0.12); /* Soft shadow for minimal depth */
+  --color-sidebar: #1a1a1d; /* Sidebar, slightly lighter than background */
+  --color-header: #232326; /* Header, matches card for unity */
+  --color-scrollbar: #232326; /* Scrollbar, matches card for harmony */
+  --color-success: #4ade80; /* Minimal green for success */
+  --color-warning: #facc15; /* Minimal yellow for alerts */
+  --color-danger: #ef4444; /* Minimal red for errors */
 }
 
 body {
   box-sizing: border-box;
   margin: 0;
-  background: #121212;
+  background: var(--color-background);
   font-family: Inter, sans-serif;
-  color: #f4f4f5;
+  color: var(--color-text);
 }
 
 .card {
-  @apply bg-card p-6 font-Mont rounded-md;
+  background: var(--color-card);
+  color: var(--color-text);
+  font-family: var(--font-Mont);
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 8px var(--color-shadow);
+  border: 1px solid var(--color-border);
+  padding: 1.25rem;
+  transition: box-shadow 0.2s, border-color 0.2s;
+  overflow: hidden;
+
 }
+.card:hover {
+  box-shadow: 0 4px 16px var(--color-shadow);
+  border-color: var(--color-accent);
+}
+
 
 .opt {
   @apply bg-card outline-none border-none appearance-none;

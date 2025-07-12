@@ -35,7 +35,7 @@ export default function Calories() {
           classNames={{
             svg: "w-[100px] h-[100px] drop-shadow-md",
             indicator: "stroke-success",
-            track: "stroke-white/10",
+            track: "stroke-border",
             value: "text-[15px] text-success font-semibold",
           }}
           disableAnimation
@@ -47,10 +47,10 @@ export default function Calories() {
 
         <div className="text-success mt-2 font-Mont">
           <div className="text-[13px] space-y-0.5">
-            <div className="font-medium">
+            <div className="font-medium text-accent">
               {data.calories.consumed} / {data.calories.goal} cal
             </div>
-            <div className="text-gray-400 text-[11px]">
+            <div className="text-text-secondary text-[11px]">
               {remCal} cals remaining
             </div>
           </div>

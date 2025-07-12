@@ -42,8 +42,8 @@ export default function Water() {
         </div>
         <Progress
           classNames={{
-            track: "bg-white/10 rounded-md",
-            indicator: "bg-gradient-to-r from-purple-300 to-accent",
+            track: "bg-border rounded-md",
+            indicator: "bg-gradient-to-r from-accent to-accent-hover",
           }}
           value={waterPercentage}
           showValueLabel={false}

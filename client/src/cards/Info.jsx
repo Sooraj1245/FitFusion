@@ -76,10 +76,10 @@ const Info = () => {
             .fill()
             .map((_, i) => (
               <div
-                className="p-2 font-Inter hover:bg-accent-hover/20 hover:cursor-pointer rounded-md border-b-1 border-accent/10 transition-all duration-200 ease-in-out"
+                className="p-2 font-Inter hover:bg-accent-hover/20 hover:cursor-pointer rounded-md border-b border-border transition-all duration-200 ease-in-out"
                 key={i}
               >
-                <h1 className="text-[15px] font-semibold">
+                <h1 className="text-[15px] font-semibold text-accent">
                   {infoData.workouts.back[0].name}
                 </h1>
                 <p className="text-text-secondary text-[14px] font-medium">

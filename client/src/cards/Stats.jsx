@@ -30,7 +30,6 @@ const Stats = () => {
         <CardHeader icon="👁️" name="Statistics" />
         <div className="flex flex-col gap-2">
           <DropDown options={options} key="calories" size="sm" />
-          {/* <DropDown /> */}
         </div>
       </div>
       <div className="flex-1 p-2">
