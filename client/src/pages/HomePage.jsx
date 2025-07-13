@@ -10,7 +10,7 @@ export default function HomePage() {
       <div className="flex flex-1 overflow-hidden min-h-0">
         <SideBar />
         <main className="flex-1 overflow-auto min-h-0">
-          <Dashboard />
+          <Intake />
         </main>
       </div>
     </div>

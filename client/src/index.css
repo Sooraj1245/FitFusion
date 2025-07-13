@@ -42,13 +42,11 @@ body {
   padding: 1.25rem;
   transition: box-shadow 0.2s, border-color 0.2s;
   overflow: hidden;
-
 }
 .card:hover {
   box-shadow: 0 4px 16px var(--color-shadow);
   border-color: var(--color-accent);
 }
-
 
 .opt {
   @apply bg-card outline-none border-none appearance-none;
@@ -68,4 +66,8 @@ body {
 
 #scroll-thumb {
   @apply transition-all duration-200 min-h-[20px] bg-linear-60 from-accent to-purple-400 absolute top-0 left-0 w-full rounded-full transition-background duration-200 ease-in cursor-grab drop-shadow-purple-300/40 drop-shadow-sm;
+}
+
+.btn:hover {
+  @apply bg-accent-hover;
 }
