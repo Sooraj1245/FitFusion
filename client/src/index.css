@@ -71,3 +71,19 @@ body {
 .btn:hover {
   @apply bg-accent-hover;
 }
+
+.sContain {
+  @apply relative overflow-hidden h-full;
+}
+
+.sContent {
+  @apply h-full pr-10;
+}
+
+.sTrack {
+  @apply absolute top-[10px] right-[10px] w-[8px] bg-accent/20 h-[calc(100%-10px)] border-border rounded-full;
+}
+
+.sThumb {
+  @apply absolute top-0 left-0 min-h-[20px] w-full bg-gradient-to-r from-accent  to-accent-hover rounded-full ring-2 ring-accent-hover/20;
+}

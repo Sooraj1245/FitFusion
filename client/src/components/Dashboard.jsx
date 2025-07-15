@@ -15,8 +15,8 @@ export default function Dashboard() {
         lg:grid-rows-[auto_1fr_auto]
         w-full
         h-full 
-        p-2 sm:p-4 
-        gap-2 sm:gap-4 
+        p-3 
+        gap-2.5
         "
     >
       {/* Top Cards */}
