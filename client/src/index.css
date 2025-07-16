@@ -8,6 +8,7 @@
 @theme {
   --font-Mont: "Montserrat Alternates", "san-serif";
   --font-Inter: "Inter", "san-serif";
+  --color-stroke: linear-gradient(#e66465, #9198e5);
   --color-background: #18181b; /* Deep neutral, minimal dark base */
   --color-card: #232326; /* Slightly lighter neutral for cards */
   --color-text: #ffffff; /* Crisp white for clarity */
@@ -86,4 +87,12 @@ body {
 
 .sThumb {
   @apply absolute top-0 left-0 min-h-[20px] w-full bg-gradient-to-r from-accent  to-accent-hover rounded-full ring-2 ring-accent-hover/20;
+}
+
+.d_grid {
+  @apply grid w-full
+      h-full
+      min-h-0
+      gap-2.5
+      p-3;
 }

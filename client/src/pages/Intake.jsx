@@ -9,16 +9,12 @@ import AddDataCard from "../cards/IntakeCards/AddDataCard";
 const Intake = () => {
   return (
     <div
-      className="grid
+      className="d_grid
       grid-cols-3
       auto-rows-min
       lg:grid-rows-[auto_1fr]
       md:grid-rows-[auto_1fr]
-      w-full
-      h-full
-      min-h-0
-      gap-2.5
-      p-3"
+      "
     >
       {/* Calorie Details - Hidden on mobile */}
       <div

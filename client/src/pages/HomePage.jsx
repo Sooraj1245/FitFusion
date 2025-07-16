@@ -2,6 +2,7 @@ import Dashboard from "../components/Dashboard";
 import Header from "../components/Header";
 import SideBar from "../components/SideBar";
 import Intake from "./Intake";
+import Workout from "./Workout";
 
 export default function HomePage() {
   return (
@@ -10,7 +11,7 @@ export default function HomePage() {
       <div className="flex flex-1 overflow-hidden min-h-0">
         <SideBar />
         <main className="flex-1 overflow-auto min-h-0">
-          <Intake />
+          <Workout />
         </main>
       </div>
     </div>
