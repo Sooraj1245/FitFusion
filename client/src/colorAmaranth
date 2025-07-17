@@ -1,0 +1,38 @@
+@theme {
+  --font-Mont: "Montserrat Alternates", "san-serif";
+  --font-Inter: "Inter", "san-serif";
+  --color-stroke: linear-gradient(
+    135deg,
+    #e84f84,
+    #68dbff
+  ); /* Amaranth to cyan gradient */
+  --color-background: linear-gradient(
+    135deg,
+    #161618,
+    #1a1a2e
+  ); /* Dark background with subtle blue undertone */
+  --color-card: linear-gradient(
+    165deg,
+    #212124,
+    #20202c
+  ); /* Subtle gradient for cards */
+  --color-text: #e2e2e2; /* Neutral white for easy reading */
+  --color-text-secondary: #a0a0b0; /* Slightly blue-tinted gray */
+  --color-accent: #e84f84; /* Amaranth - primary accent */
+  --color-accent-hover: #d64575; /* Darker Amaranth for hover */
+  --color-success: #4fe8a8; /* Mint green for success states */
+  --color-info: #68dbff; /* Cyan for info/progress */
+  --color-border: rgba(255, 255, 255, 0.03); /* Very subtle light border */
+  --color-shadow: rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  --color-sidebar: linear-gradient(
+    165deg,
+    #1a1a2e,
+    #161618
+  ); /* Matching sidebar gradient */
+  --color-header: linear-gradient(
+    165deg,
+    #1a1a2e,
+    #161618
+  ); /* Matching header gradient */
+  --color-scrollbar: #3e3e4e; /* Muted scrollbar for harmony */
+}

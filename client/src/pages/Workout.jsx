@@ -1,5 +1,6 @@
 import React from "react";
 import WorkoutListCard from "../cards/workoutCards/workoutListCard";
+import WorkoutStatsCard from "../cards/workoutCards/workoutStatsCard";
 
 const Workout = () => {
   return (
@@ -7,14 +8,14 @@ const Workout = () => {
       className="d_grid 
     grid-cols-1
     auto-rows-max
-    md:grid-cols-3
-    md:auto-rows-fr
+    lg:grid-cols-3
+    lg:auto-rows-fr
     "
     >
       <div className="card col-start-1 row-start-1">
-        <WorkoutListCard />
+        <WorkoutStatsCard />
       </div>
-      <div className="card col-start-1 row-start-2 md:col-start-2 md:col-end-4 md:row-start-1">
+      <div className="card col-start-1 row-start-2 lg:col-start-2 lg:col-end-4 lg:row-start-1">
         Workout Card
       </div>
     </div>

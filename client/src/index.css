@@ -6,23 +6,46 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  --font-Mont: "Montserrat Alternates", "san-serif";
-  --font-Inter: "Inter", "san-serif";
-  --color-stroke: linear-gradient(#e66465, #9198e5);
-  --color-background: #18181b; /* Deep neutral, minimal dark base */
-  --color-card: #232326; /* Slightly lighter neutral for cards */
-  --color-text: #ffffff; /* Crisp white for clarity */
-  --color-text-secondary: #b1b1b1; /* Subtle gray for secondary text */
-  --color-accent: #4f8cff; /* Clean blue accent */
-  --color-accent-hover: #2563eb; /* Deeper blue for hover */
-  --color-border: #2c2c2f; /* Neutral border for separation */
-  --color-shadow: rgba(0, 0, 0, 0.12); /* Soft shadow for minimal depth */
-  --color-sidebar: #1a1a1d; /* Sidebar, slightly lighter than background */
-  --color-header: #232326; /* Header, matches card for unity */
-  --color-scrollbar: #232326; /* Scrollbar, matches card for harmony */
-  --color-success: #4ade80; /* Minimal green for success */
-  --color-warning: #facc15; /* Minimal yellow for alerts */
-  --color-danger: #ef4444; /* Minimal red for errors */
+  --font-Mont: "Montserrat Alternates", "sans-serif";
+  --font-Inter: "Inter", "sans-serif";
+
+  /* ✨ Core Backgrounds */
+  --color-background: linear-gradient(135deg, #0f0f1a, #181829);
+  --color-card: #1a1b26;
+
+  /* ✨ Text */
+  --color-text: #e6f1ff;
+  --color-text-secondary: #9caac9;
+
+  /* ✨ Branding Accent (Not semantic!) */
+  --color-accent: #7dd3fc; /* Sky blue for brand pops (buttons, hover links) */
+  --color-accent-hover: #38bdf8;
+
+  /* ✨ Semantic States */
+  --color-success: #22c55e; /* Lime green - for completed things */
+  --color-danger: #ef4444; /* Red - for warnings */
+  --color-warning: #facc15; /* Yellow - for time/urgency */
+  --color-info: #3b82f6; /* Blue - neutral highlights */
+
+  /* ✨ Component Colors */
+  --color-workout-time: #4b5563; /* Charcoal gray-blue */
+  --color-calories: #7f1d1d; /* Dark ember red */
+  --color-intensity: #1e3a8a; /* Deep steel blue */
+  --color-last-workout: #4c1d95; /* Royal violet */
+  --color-streak: #14532d; /* Forest green */
+
+  /* ✨ Borders & Shadows */
+  --color-border: #2c2d3c;
+  --color-shadow: rgba(0, 0, 0, 0.6);
+
+  /* ✨ Layout UI */
+  --color-sidebar: linear-gradient(135deg, #1f2333, #141620);
+  --color-header: linear-gradient(135deg, #141620, #1f2333);
+  --color-scrollbar: #2e3a4e;
+
+  /* ✨ FX */
+  --color-stroke: linear-gradient(135deg, #8ddcff, #c1f2ff);
+  --color-focus-ring: #60a5fa;
 }
 
 body {
