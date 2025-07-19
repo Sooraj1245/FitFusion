@@ -1,4 +1,6 @@
-export default function CardHeader(props) {
+import React from "react";
+
+const CardHeader = (props) => {
   return (
     <div className="flex items-center gap-2 mb-3">
       {props.icon ? (
@@ -9,4 +11,6 @@ export default function CardHeader(props) {
       </h2>
     </div>
   );
-}
+};
+
+export default CardHeader;

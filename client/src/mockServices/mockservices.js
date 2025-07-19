@@ -138,3 +138,17 @@ export function getWaterData() {
     }, 500);
   });
 }
+
+export function getWorkoutStats() {
+  return new Promise((d) => {
+    setTimeout(() => {
+      d({
+        burned: "200",
+        logTime: "4",
+        intensityL: "4",
+        streak: "4",
+        lastLog: "July 19",
+      });
+    }, 5000);
+  });
+}
