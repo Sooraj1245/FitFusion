@@ -152,3 +152,176 @@ export function getWorkoutStats() {
     }, 5000);
   });
 }
+
+export function getWorkouts() {
+  const pplSplit = {
+    split: "PPL",
+    workouts: {
+      d1: [
+        "Barbell Bench Press",
+        "Overhead Press",
+        "Incline Dumbbell Press",
+        "Lateral Raises",
+        "Triceps Dips",
+        "Overhead Triceps Extension",
+      ],
+      d2: [
+        "Pull-Ups",
+        "Barbell Row",
+        "Face Pulls",
+        "Lat Pulldown",
+        "Dumbbell Curls",
+        "Hammer Curls",
+      ],
+      d3: [
+        "Barbell Squats",
+        "Romanian Deadlift",
+        "Leg Press",
+        "Leg Curl",
+        "Standing Calf Raise",
+        "Seated Calf Raise",
+      ],
+      d4: [
+        "Incline Barbell Press",
+        "Dumbbell Shoulder Press",
+        "Cable Chest Fly",
+        "Front Raises",
+        "Skull Crushers",
+        "Rope Pushdowns",
+      ],
+      d5: [
+        "Chin-Ups",
+        "T-Bar Row",
+        "Rear Delt Fly",
+        "Cable Row",
+        "EZ Bar Curl",
+        "Preacher Curl",
+      ],
+      d6: [
+        "Front Squats",
+        "Walking Lunges",
+        "Hip Thrusts",
+        "Leg Extensions",
+        "Calf Press",
+        "Donkey Calf Raise",
+      ],
+    },
+  };
+  const upperLowerSplit = {
+    split: "Upper/Lower",
+    workouts: {
+      d1: [
+        "Barbell Bench Press",
+        "Pull-Ups",
+        "Overhead Press",
+        "Barbell Row",
+        "Lateral Raises",
+        "Triceps Pushdown",
+        "Barbell Curl",
+      ],
+      d2: [
+        "Back Squat",
+        "Romanian Deadlift",
+        "Walking Lunges",
+        "Leg Curl",
+        "Standing Calf Raise",
+        "Core Plank Holds",
+      ],
+      d3: [
+        "Incline Dumbbell Press",
+        "Lat Pulldown",
+        "Arnold Press",
+        "One-Arm Dumbbell Row",
+        "Face Pulls",
+        "Dips",
+        "Hammer Curl",
+      ],
+      d4: [
+        "Front Squat",
+        "Hip Thrust",
+        "Leg Extension",
+        "Hamstring Curl",
+        "Seated Calf Raise",
+        "Russian Twists",
+      ],
+    },
+  };
+  const fullBodySplit = {
+    split: "Full Body",
+    workouts: {
+      d1: [
+        "Barbell Squat",
+        "Bench Press",
+        "Barbell Row",
+        "Leg Curl",
+        "Triceps Rope",
+        "Barbell Curl",
+      ],
+      d2: [
+        "Deadlift",
+        "Overhead Press",
+        "Lat Pulldown",
+        "Bulgarian Split Squat",
+        "Lateral Raise",
+        "Hammer Curl",
+      ],
+      d3: [
+        "Front Squat",
+        "Incline Dumbbell Press",
+        "Cable Row",
+        "Leg Extension",
+        "Skull Crushers",
+        "EZ Bar Curl",
+      ],
+    },
+  };
+  const broSplit = {
+    split: "Bro Split",
+    workouts: {
+      d1: [
+        "Flat Bench",
+        "Incline Dumbbell Press",
+        "Cable Fly",
+        "Pushups",
+        "Dips",
+      ],
+      d2: [
+        "Pull-Ups",
+        "Barbell Row",
+        "Lat Pulldown",
+        "Rear Delt Fly",
+        "Shrugs",
+        "Face Pulls",
+      ],
+      d3: [
+        "Back Squat",
+        "Leg Press",
+        "Ham Curl",
+        "Walking Lunges",
+        "Standing Calf",
+        "Seated Calf",
+      ],
+      d4: [
+        "Seated Overhead Press",
+        "Arnold Press",
+        "Lateral Raise",
+        "Rear Delt Machine",
+        "Shrugs",
+      ],
+      d5: [
+        "Barbell Curl",
+        "Preacher Curl",
+        "Hammer Curl",
+        "Cable Curl",
+        "Skull Crushers",
+        "Triceps Pushdown",
+      ],
+    },
+  };
+
+  return new Promise((x) => {
+    setTimeout(() => {
+      x(broSplit);
+    }, 500);
+  });
+}

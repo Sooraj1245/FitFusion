@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import CardHeader from "../../components/CardHeader.jsx";
 import { getWorkoutStats } from "../../mockServices/mockservices";
+import Loading from "../../components/Loading.jsx";
 const COLOR_CLASSES = {
   calCard: {
     border: "border-[#7f1d1d]",
@@ -66,13 +67,7 @@ const WorkoutStatsCard = () => {
   }, []);
 
   if (!statsData) {
-    return (
-      <div className="flex justify-center p-7">
-        <h1 className="text-[20px] font-semibold text-text-secondary animate-pulse">
-          Gathering Data...
-        </h1>
-      </div>
-    );
+    return <Loading />;
   }
   return (
     <div>
