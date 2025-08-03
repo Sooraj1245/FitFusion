@@ -1,6 +1,6 @@
 import React from "react";
 import WorkoutListCard from "../cards/workoutCards/WorkoutListCard";
-import WorkoutStatsCard from "../cards/workoutCards/workoutStatsCard";
+import WorkoutStatsCard from "../cards/workoutCards/WorkoutStatsCard";
 
 const Workout = () => {
   return (

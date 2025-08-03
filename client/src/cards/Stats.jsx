@@ -1,6 +1,6 @@
 import React from "react";
 import CardHeader from "../components/CardHeader";
-import DropDown from "../components/Dropdown";
+import DropDown from "../components/DropDown";
 import AreaChart from "../components/AreaChart";
 
 const Stats = () => {

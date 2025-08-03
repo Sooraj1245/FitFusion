@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import CardHeader from "../components/CardHeader";
-import DropDown from "../components/Dropdown";
+import DropDown from "../components/DropDown";
 import { infoData } from "../dummyData";
 import { update, events, drag, trackClick } from "../scripts/scrollBarControl";
 

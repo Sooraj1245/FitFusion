@@ -4,7 +4,7 @@ import { faDumbbell } from "@fortawesome/free-solid-svg-icons";
 import { faDashboard } from "@fortawesome/free-solid-svg-icons";
 import { faUtensils } from "@fortawesome/free-solid-svg-icons";
 const SidebarItemGen = (props) => (
-  <div className=" w-full flex group gap-2 justify-evenly items-center  text-[17px] font-semibold font-Mont bg-gray-50/5 p-3 rounded-lg hover:bg-accent-hover/80 transition-colors duration-150">
+  <div className=" w-full flex group gap-2 justify-evenly items-center  text-[17px] font-semibold font-Mont bg-gray-50/5 p-3 cursor-pointer rounded-lg hover:bg-accent-hover/80 transition-colors duration-150">
     <FontAwesomeIcon
       className="text-[20px] lg:text-[17px] text-blue-400 group-hover:text-blue-950 transition-colors duration-150"
       icon={props.icon}
